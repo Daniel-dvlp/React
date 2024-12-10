@@ -1,0 +1,152 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0ff;
+  text-decoration: none;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.nav-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #f0f;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.mobile-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 968px) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+}
+
+.cart-container {
+  display: inline-block;
+  position: absolute;
+  margin-right: 5rem;
+}
+
+.navbar-end {
+  display: flex;
+  align-items: center;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 1001;
+} 
+
+.navbar-end {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Añade espacio entre los iconos */
+  }
+  
+  .nav-icon {
+    display: inline-flex; /* Asegúrate de que siempre sean visibles */
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .cart-container {
+    position: relative;
+    display: inline-flex; /* Esto también ayuda a mantener su visibilidad */
+  }
+  
+  .cart-container .nav-icon {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .cart-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 1001;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-menu {
+      display: block;
+    }
+  
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      top: 100%;    
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+    }
+  }
